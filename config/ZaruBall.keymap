@@ -191,7 +191,7 @@
         compatible = "zmk,keymap";
 
         base_layer {
-            display-name = "Base";
+            display-name = "QWERTY";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
 &kp ESC    &kp N1  &kp N2      &kp N3    &kp N4     &kp N5                                &kp KP_N7    &kp KP_N8 &kp KP_N9  &kp KP_DIVIDE               &kp NUMBER_6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
@@ -203,7 +203,7 @@
         };
 
         naginata_layer {
-            display-name = "Naginata";
+            display-name = "NGNT";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
 &trans    &trans  &trans      &trans       &trans        &trans                       &trans &trans &trans &trans            &trans  &trans  &trans     &trans   &trans     &trans
