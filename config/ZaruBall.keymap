@@ -7,6 +7,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/input_transform.h>
 
 #define BASE     0
 #define MOUSE    1
@@ -16,8 +17,21 @@
 #define SCROLL   2
 
 // スクロール量の設定
-
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+
+&trackball_listener {
+    input-processors = // <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT)
+                        <&zip_temp_layer MOUSE 500>;
+    scroller {
+        layers = <SCROLL>;
+        input-processors = <
+                            &zip_xy_transform INPUT_TRANSFORM_Y_INVERT
+                            &zip_xy_scaler 1 20
+                            &zip_xy_to_scroll_mapper
+                            >;
+                            // (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT)
+    };
+};
 
 / {
     conditional_layers {
