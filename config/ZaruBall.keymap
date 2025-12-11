@@ -1,5 +1,5 @@
-//#include <dt-bindings/zmk/mouse.h>
-
+// スクロール量の設定
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 #include <behaviors/rgbled_widget.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -16,18 +16,13 @@
 #define ADJUST   4
 #define SCROLL   2
 
-// スクロール量の設定
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
-
 &trackball_listener {
     input-processors =  <
-                        //  &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT)
                          &zip_temp_layer MOUSE 500
                         >;
     scroller {
         layers = <SCROLL>;
         input-processors = <
-                            // &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT)
                             &zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)
                             &zip_xy_scaler 1 20
                             &zip_xy_to_scroll_mapper
@@ -35,7 +30,7 @@
     };
 };
 
-/ {
+/{
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -48,13 +43,10 @@
 
 / {
     behaviors {
-        // スクロール用のbehaviorの設定
-
         scroll_down_up: behavior_sensor_rotate_mouse_wheel_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
             tap-ms = <20>; // スクロールのタップ時間
         };
 
