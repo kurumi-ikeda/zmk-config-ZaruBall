@@ -10,9 +10,9 @@
 
     // XIAO BLE オンボード RGB LED を zmk-rgbled-widget 用にエイリアス設定
     aliases {
-        led_red   = &led0;
-        led_green = &led1;
-        led_blue  = &led2;
+        led-red   = &led0;
+        led-green = &led1;
+        led-blue  = &led2;
     };
 };
 
