@@ -8,6 +8,12 @@
         zmk,physical-layout = &physical_layout0;
     };
 };
+// XIAO BLE オンボード RGB LED を zmk-rgbled-widget 用にエイリアス設定
+aliases {
+    led-red   = &led0;
+    led-green = &led1;
+    led-blue  = &led2;
+};
 
 // physical layouts (key propretyあり)
 / {
