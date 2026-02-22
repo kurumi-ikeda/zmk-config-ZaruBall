@@ -7,13 +7,6 @@
         zmk,kscan = &kscan0;
         zmk,physical-layout = &physical_layout0;
     };
-
-    // XIAO BLE オンボード RGB LED を zmk-rgbled-widget 用にエイリアス設定
-    aliases {
-        led-red   = &led0;
-        led-green = &led1;
-        led-blue  = &led2;
-    };
 };
 
 // physical layouts (key propretyあり)
@@ -192,7 +185,7 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        cpi = <1800>;
+        cpi = <600>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
