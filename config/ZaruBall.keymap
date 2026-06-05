@@ -23,7 +23,7 @@
 &trackball_listener {
     input-processors = <
                          &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT)
-                         &zip_temp_layer MOUSE 500
+                         &zip_temp_layer MOUSE 200
     >;
 
     scroller {
@@ -142,7 +142,7 @@
 &to_layer_0 ESC   &to_layer_0 N1  &to_layer_0 N2  &to_layer_0 N3  &to_layer_0 N4  &to_layer_0 N5                     &trans  &trans  &trans  &trans                       &to_layer_0 N6  &to_layer_0 N7  &to_layer_0 N8  &to_layer_0 N9      &to_layer_0 N0            &to_layer_0 MINUS
 &kp TAB           &kp Q           &to_layer_0 W   &to_layer_0 E   &to_layer_0 R   &to_layer_0 T                      &trans  &trans  &trans  &trans                       &to_layer_0 Y   &to_layer_0 U   &to_layer_0 I   &to_layer_0 O       &to_layer_0 P             &to_layer_0 EQUAL
 &kp LEFT_CONTROL  &kp A           &kp S           &kp D           &to_layer_0 F   &kp G           &msc SCRL_LEFT     &trans  &trans  &trans  &trans    &kp LEFT_BRACKET   &kp H           &mkp LCLK       &mkp MCLK       &mkp RCLK           &to_layer_0 SINGLE_QUOTE  &to_layer_0 SEMICOLON
-&kp LSHIFT        &kp Z           &kp X           &kp C           &kp V           &kp B           &msc SCRL_RIGHT    &trans  &trans  &trans  &trans    &kp RIGHT_BRACKET  &kp N           &to_layer_0 M   &to_layer_0 COMMA  &to_layer_0 PERIOD  &to_layer_0 SLASH         &lt 3 BACKSLASH
+&kp LSHIFT        &kp Z           &kp X           &kp C           &kp V           &kp B           &msc SCRL_RIGHT    &trans  &trans  &trans  &trans    &kp RIGHT_BRACKET  &kp N           &mkp MB4        &mkp MB5        &to_layer_0 PERIOD  &to_layer_0 SLASH         &lt 3 BACKSLASH
 &trans            &trans                          &trans          &trans          &trans          &trans                                               &trans             &trans                                                                                        &trans
             >;
         };
