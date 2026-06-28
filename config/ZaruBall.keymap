@@ -62,15 +62,15 @@
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&lt 5 LANG2>, <&mo 2>, <&mo 1>;
         };
 
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mt RCTL LANG1>, <&mo 2>, <&mo 1>;
+            tapping-term-ms = <150>;
+            bindings = <&lt 5 LANG1>, <&mo 2>, <&mo 1>;
         };
 
         // Customed Hold-Tap for SandS
