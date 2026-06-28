@@ -63,7 +63,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&lt MOUSE LANG2>, <&mo 2>, <&mo 1>;
+            bindings = <&lt 5 LANG2>, <&mo 2>, <&mo 1>;
         };
 
         td1: tap_dance_1 {
@@ -96,7 +96,7 @@
         td0_j_lclk {
             timeout-ms = <200>;
             key-positions = <68 45>;
-            layers = <BASE>;
+            layers = <0>;
             bindings = <&mkp LCLK>;
             slow-release;
         };
@@ -104,7 +104,7 @@
         td0_k_mclk {
             timeout-ms = <200>;
             key-positions = <68 46>;
-            layers = <BASE>;
+            layers = <0>;
             bindings = <&mkp MCLK>;
             slow-release;
         };
@@ -112,7 +112,7 @@
         td0_l_rclk {
             timeout-ms = <200>;
             key-positions = <68 47>;
-            layers = <BASE>;
+            layers = <0>;
             bindings = <&mkp RCLK>;
             slow-release;
         };
@@ -120,7 +120,7 @@
         td0_m_mb4 {
             timeout-ms = <200>;
             key-positions = <68 63>;
-            layers = <BASE>;
+            layers = <0>;
             bindings = <&mkp MB4>;
             slow-release;
         };
@@ -128,7 +128,7 @@
         td0_comma_mb5 {
             timeout-ms = <200>;
             key-positions = <68 64>;
-            layers = <BASE>;
+            layers = <0>;
             bindings = <&mkp MB5>;
             slow-release;
         };
@@ -230,7 +230,17 @@
             >;
         };
 
-        extra1 { status = "reserved"; };
+        click_layer {
+            display-name = "Click";
+            sensor-bindings = <&scroll_down_up>;
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4   &mkp MB5   &trans     &trans  &trans
+&trans  &trans          &trans  &trans  &trans  &trans                                  &trans  &trans                                  &trans
+            >;
+        };
 
         extra2 { status = "reserved"; };
     };
