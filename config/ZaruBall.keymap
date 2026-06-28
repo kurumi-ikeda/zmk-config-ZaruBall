@@ -88,6 +88,53 @@
     };
 };
 
+// &td0 + mouse button positions on the base layer
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        td0_j_lclk {
+            timeout-ms = <200>;
+            key-positions = <68 45>;
+            layers = <BASE>;
+            bindings = <&mkp LCLK>;
+            slow-release;
+        };
+
+        td0_k_mclk {
+            timeout-ms = <200>;
+            key-positions = <68 46>;
+            layers = <BASE>;
+            bindings = <&mkp MCLK>;
+            slow-release;
+        };
+
+        td0_l_rclk {
+            timeout-ms = <200>;
+            key-positions = <68 47>;
+            layers = <BASE>;
+            bindings = <&mkp RCLK>;
+            slow-release;
+        };
+
+        td0_m_mb4 {
+            timeout-ms = <200>;
+            key-positions = <68 63>;
+            layers = <BASE>;
+            bindings = <&mkp MB4>;
+            slow-release;
+        };
+
+        td0_comma_mb5 {
+            timeout-ms = <200>;
+            key-positions = <68 64>;
+            layers = <BASE>;
+            bindings = <&mkp MB5>;
+            slow-release;
+        };
+    };
+};
+
 &sl { release-after-ms = <250>; }; // time needed for double click (for mkp_exit_AML)
 / {
     macros {
