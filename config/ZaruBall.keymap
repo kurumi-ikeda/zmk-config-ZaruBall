@@ -132,6 +132,46 @@
             bindings = <&mkp MB5>;
             slow-release;
         };
+
+        mouse_j_k_lclk {
+            timeout-ms = <200>;
+            key-positions = <45 46>;
+            layers = <1>;
+            bindings = <&mkp LCLK>;
+            slow-release;
+        };
+
+        mouse_i_k_mclk {
+            timeout-ms = <200>;
+            key-positions = <44 46>;
+            layers = <1>;
+            bindings = <&mkp MCLK>;
+            slow-release;
+        };
+
+        mouse_l_k_rclk {
+            timeout-ms = <200>;
+            key-positions = <47 46>;
+            layers = <1>;
+            bindings = <&mkp RCLK>;
+            slow-release;
+        };
+
+        mouse_n_m_mb4 {
+            timeout-ms = <200>;
+            key-positions = <63 64>;
+            layers = <1>;
+            bindings = <&mkp MB4>;
+            slow-release;
+        };
+
+        mouse_comma_dot_mb5 {
+            timeout-ms = <200>;
+            key-positions = <64 65>;
+            layers = <1>;
+            bindings = <&mkp MB5>;
+            slow-release;
+        };
     };
 };
 
